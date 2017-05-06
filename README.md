@@ -1,5 +1,5 @@
 # RainDropSocializer
-The First Plugin from RainDropInMCYT. Depends on ProjectRails, created by DividedWeFall/Bayside.
+The First Plugin from RainDropInMCYT. Depends on ProjectRails, created by DividedWeFall/Bayside. (https://github.com/Project-Rails/Releases/releases)
 
 ## What is this plugin for?
 This is a plugin for ProjectRails and is used for social stuff on a server. Some features include Announcements and DM's. 
