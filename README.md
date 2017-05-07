@@ -10,6 +10,8 @@ Glad you asked.
 
 The permission node for the announce command is raindrop.broadcast.use
 The permission node for the private messages command is raindrop.broadcast.use
+The permission node for the Donator Chat is raindrop.donatorchat
+The permission node for the Staff Chat is raindrop.staffchat
 
 ## What version is this for?
 This plugin is for ProjectRails that is compatible with MC version 1.11.2.
