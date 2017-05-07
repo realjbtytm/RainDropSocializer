@@ -31,6 +31,8 @@ public class MyPlugin extends PluginBase {
     	server.registerCommand((PluginReference.MC_Command)new MotdCmd());
     	server.registerCommand((PluginReference.MC_Command)new AnnounceCmd());
     	server.registerCommand((PluginReference.MC_Command)new DirectMessagingCMD());
+    	server.registerCommand((PluginReference.MC_Command)new StaffChatCmd());
+    	server.registerCommand((PluginReference.MC_Command)new DonatorChatCmd());
     	//I recommend installing "_JoeUtils" on every plug-in you make. Super easy. This creates the plugin's folder
     	_JoeUtils.EnsureDirectory(PluginDir);
     	File yourFile = new File(PluginDataFilename);
