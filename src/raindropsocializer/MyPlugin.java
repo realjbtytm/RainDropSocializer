@@ -9,18 +9,20 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 import PluginReference.ChatColor;
+import PluginReference.MC_DamageType;
 import PluginReference.MC_EventInfo;
 import PluginReference.MC_Location;
 import PluginReference.MC_Player;
 import PluginReference.MC_Server;
 import PluginReference.PluginBase;
 import PluginReference.PluginInfo;
+import PluginReference.RainbowUtils;
 
 public class MyPlugin extends PluginBase {
 	//None of this next stuff is necessary, it's just how I like to format it
     public static MC_Server server = null;
     public static String pluginName = "RainDropSocializer";
-    public static String version = "1.0.1";
+    public static String version = "1.0.3";
     public static String PluginDir = "plugins_mod" + File.separator + "RainDropSocializer" + File.separator;
     public static String PluginDataFilename = String.valueOf(PluginDir) + "motd.txt";
     private static Logger logger = Logger.getLogger(pluginName);
@@ -102,5 +104,12 @@ public class MyPlugin extends PluginBase {
     		ei.isCancelled = false;
     		ei.isModified = true;
     	}
+    }    
+    
+    // Player Death announcement
+    public void onPlayerDeath(MC_Player plrVictim, MC_Player plrKiller, MC_DamageType dmgType, String deathMsg) {
+    	deathMsg = ChatColor.GOLD + "[News] " + plrVictim + " has been murdered by " + plrKiller + "via " + dmgType + "!";
+    	RainbowUtils.getServer().broadcastMessage(deathMsg);
     }
+    
 }
