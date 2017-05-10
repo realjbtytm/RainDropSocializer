@@ -36,7 +36,9 @@ public class StaffChatCmd implements MC_Command {
         if(hasPermissionToUse(arg0)) {
             for(MC_Player player: RainbowUtils.getServer().getPlayers()) {
                 if(player.hasPermission("raindrop.staffchat")) {
-                    player.sendMessage(ChatColor.LIGHT_PURPLE + "[Staff]: " + arg0.getName() + ChatColor.GRAY + " " + arg1);
+                	Object staffchat = ChatColor.LIGHT_PURPLE + "[Staff]: " + arg0.getName() + ChatColor.GRAY + " " + arg1;
+                	String s = staffchat.toString();
+                    player.sendMessage(s);
             }
             } } else {
             arg0.sendMessage(ChatColor.RED + "You don't have permission!");

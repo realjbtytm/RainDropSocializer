@@ -22,7 +22,7 @@ public class MyPlugin extends PluginBase {
 	//None of this next stuff is necessary, it's just how I like to format it
     public static MC_Server server = null;
     public static String pluginName = "RainDropSocializer";
-    public static String version = "1.0.3";
+    public static String version = "1.0.4";
     public static String PluginDir = "plugins_mod" + File.separator + "RainDropSocializer" + File.separator;
     public static String PluginDataFilename = String.valueOf(PluginDir) + "motd.txt";
     private static Logger logger = Logger.getLogger(pluginName);
