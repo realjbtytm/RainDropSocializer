@@ -32,10 +32,8 @@ public class AnnounceCmd implements MC_Command {
  
     @Override
     public void handleCommand(MC_Player plr, String[] args) {
-        if(hasPermissionToUse(plr) == true) {
-        	Object announcement = ChatColor.YELLOW + "[SERVER NEWS] " + ChatColor.AQUA + args;
-        	String s = announcement.toString();
-            RainbowUtils.getServer().broadcastMessage(s);
+		String readable = Arrays.asList(args2).toString();
+		Object announcement = ChatColor.YELLOW + "[SERVER NEWS] " + ChatColor.AQUA + readable.substring(1, readable.length() - 1));
         } else {
             plr.sendMessage(ChatColor.RED + "No Permission.");
         }
